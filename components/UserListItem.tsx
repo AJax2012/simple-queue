@@ -8,11 +8,6 @@ interface UserListItemProps {
 }
 
 const UserListItem = ({ reservation, handleDelete }: UserListItemProps) => {
-  const user = supabase.auth.user();
-  if (!user) {
-    return <></>;
-  }
-
   return (
     <ListGroup.Item as="li" className="d-flex justify-content-between">
       <h4 className="my-auto">{reservation.username}</h4>
